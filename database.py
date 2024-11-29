@@ -13,7 +13,8 @@ engine = create_engine(
     }
   })
 """
-db_connection_string = os.environ['DB_CONNECTION_STRING']
+db_connection_string = os.getenv("DB_CONNECTION_STRING")
+
 ssl_args = {'ssl': {
             'ssl_ca': "/etc/ssl/cert.pem"}
           }
